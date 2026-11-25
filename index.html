@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplex Methods | Quantitative Methods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">Simplex<span>Methods</span></a>
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#guide">Simplex Guide</a>
+      <a href="#modules">Modules</a>
+      <a href="#team">Our Team</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="small-title">MS102 · QUANTITATIVE METHODS</p>
+        <h1>Simplex Methods<br><span>Learning Website</span></h1>
+        <p>A simple learning space for understanding Linear Programming, the Simplex Method, and related topics.</p>
+        <a class="button" href="#calculator">Try the Calculator</a>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">“</div>
+        <p>Mathematics is not about numbers, equations, or algorithms—it's about understanding.</p>
+        <small>— Mathematics quotation</small>
+      </div>
+    </section>
+
+    <section class="content-section" id="calculator">
+      <div class="section-heading">
+        <p class="small-title">PRACTICE TOOL</p>
+        <h2>Simplex Calculator</h2>
+        <p>Enter a maximization problem in the format shown below. This calculator supports constraints using ≤ and non-negative variables.</p>
+      </div>
+
+      <div class="calculator">
+        <div class="calculator-fields">
+          <label for="objective">Objective function coefficients</label>
+          <input id="objective" type="text" value="3, 5" placeholder="Example: 3, 5">
+          <small>For Max Z = 3x₁ + 5x₂, enter: 3, 5</small>
+
+          <label for="constraints">Constraints (one per line)</label>
+          <textarea id="constraints" rows="5" placeholder="2, 1 <= 8&#10;1, 2 <= 8">2, 1 <= 8
+1, 2 <= 8</textarea>
+          <small>Example: 2, 1 &lt;= 8 means 2x₁ + x₂ ≤ 8. Use the same number of coefficients as the objective function.</small>
+
+          <button class="button" id="solveButton">Solve Problem</button>
+          <button class="button button-light" id="exampleButton">Load Example</button>
+        </div>
+        <div class="result-area" id="result" aria-live="polite">
+          <h3>Solution</h3>
+          <p class="muted">Enter your coefficients and constraints, then click “Solve Problem”.</p>
+        </div>
+      </div>
+      <p class="notice"><strong>Calculator limitation:</strong> This student demo handles maximization problems with ≤ constraints, non-negative right-hand sides, and non-negative variables. It does not solve minimization, equality, ≥, or artificial-variable problems such as Big M and Two-Phase.</p>
+    </section>
+
+    <section class="content-section pale" id="guide">
+      <div class="section-heading">
+        <p class="small-title">QUICK REVIEW</p>
+        <h2>Step-by-Step Simplex Method</h2>
+        <p>A short guide to the usual maximization tableau procedure.</p>
+      </div>
+      <div class="guide-list">
+        <article><span>1</span><div><h3>Convert to standard form</h3><p>Write the objective function and constraints in standard form. For ≤ constraints, add slack variables.</p></div></article>
+        <article><span>2</span><div><h3>Choose the pivot column</h3><p>In the common maximization tableau convention, choose the most negative coefficient in the bottom row.</p></div></article>
+        <article><span>3</span><div><h3>Choose the pivot row</h3><p>Divide each eligible positive pivot-column entry into its right-hand-side value. Choose the smallest non-negative ratio.</p></div></article>
+        <article><span>4</span><div><h3>Perform pivot operations</h3><p>Make the pivot value 1, then make the other values in that column 0.</p></div></article>
+        <article><span>5</span><div><h3>Check the result</h3><p>Repeat until there are no negative coefficients left in the bottom row. Then read the solution.</p></div></article>
+      </div>
+    </section>
+
+    <section class="content-section" id="modules">
+      <div class="section-heading">
+        <p class="small-title">COURSE MATERIALS</p>
+        <h2>Modules Download</h2>
+        <p>Download the available class materials below. Missing files are intentionally left as unavailable.</p>
+      </div>
+      <div class="module-grid">
+        <article class="module">
+          <div class="module-icon">01</div><h3>Linear Programming</h3>
+          <p>Introduction to inequalities, graphical method, feasible region, decision variables, and objective functions.</p>
+          <a href="materials/module-1-linear-programming.pdf" download>Download PDF ↓</a>
+        </article>
+        <article class="module unavailable">
+          <div class="module-icon">02</div><h3>Simplex Method</h3>
+          <p>Module file has not been provided yet.</p>
+          <span>Not available</span>
+        </article>
+        <article class="module unavailable">
+          <div class="module-icon">03</div><h3>Two-Phase Method &amp; M-Method</h3>
+          <p>Module file has not been provided yet.</p>
+          <span>Not available</span>
+        </article>
+        <article class="module">
+          <div class="module-icon">04</div><h3>Dual Method / Duality</h3>
+          <p>Dual problem formulation, primal-dual relationships, and an example using the simplex algorithm.</p>
+          <a href="materials/module-4-dual-method.pdf" download>Download PDF ↓</a>
+        </article>
+        <article class="module">
+          <div class="module-icon">05</div><h3>Additional Materials</h3>
+          <p>Supplementary Quantitative Methods learning material.</p>
+          <a href="materials/module-5-additional-materials.pptx" download>Download PPT ↓</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section pale" id="team">
+      <div class="section-heading">
+        <p class="small-title">THE PEOPLE BEHIND THIS PROJECT</p>
+        <h2>Our Teacher &amp; Team</h2>
+      </div>
+      <div class="teacher-card">
+        <img src="assets/teacher.jpg" alt="Photo of our teacher">
+        <div><p class="small-title">OUR INSTRUCTOR</p><h3>PTL. Norcelito Galvan</h3><p>Quantitative Methods</p></div>
+      </div>
+      <h3 class="team-title">Our Team Members</h3>
+      <div class="team-grid">
+        <div class="member"><span>JV</span><p>Jay Ann Villanueva</p></div>
+        <div class="member"><span>MB</span><p>Merry Cris Barcelona Basarte</p></div>
+        <div class="member"><span>JD</span><p>John Paul Dasig</p></div>
+        <div class="member"><span>BT</span><p>Brent Gillian Treñoza</p></div>
+        <div class="member"><span>CP</span><p>Cherry Ann Perol</p></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="feedback">
+      <div class="section-heading">
+        <p class="small-title">SHARE YOUR THOUGHTS</p>
+        <h2>Reviewer Feedback</h2>
+        <p>Tell us what you think about this learning website.</p>
+      </div>
+      <form class="feedback-form" id="feedbackForm">
+        <label for="feedbackName">Your name</label>
+        <input id="feedbackName" type="text" required placeholder="Enter your name">
+        <label for="feedbackRating">Rating</label>
+        <select id="feedbackRating" required>
+          <option value="">Select a rating</option>
+          <option>⭐⭐⭐⭐⭐ Excellent</option>
+          <option>⭐⭐⭐⭐ Very Good</option>
+          <option>⭐⭐⭐ Good</option>
+          <option>⭐⭐ Fair</option>
+          <option>⭐ Needs Improvement</option>
+        </select>
+        <label for="feedbackMessage">Your feedback</label>
+        <textarea id="feedbackMessage" rows="4" required placeholder="Write your comment..."></textarea>
+        <button class="button" type="submit">Submit Feedback</button>
+        <div id="feedbackOutput" class="feedback-output" aria-live="polite"></div>
+      </form>
+      <p class="notice">Feedback demo: comments appear on this page during the current session only. A database or backend is needed to save feedback permanently.</p>
+    </section>
+  </main>
+
+  <footer><p>Simplex Methods · MS102 Quantitative Methods</p><a href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
